@@ -7,13 +7,13 @@ public class The_One {
         this.value = value;
     }
 
-    public The_One bind(Teste func){
-        this.value = func.teste(this.value);
+    public The_One bind(Function func){
+        this.value = func.call(this.value);
         return this;
     }
     public void print_me(){
         for (int i = 0; i < value.size(); i++){
-            for(int j = 0; j < value.get(i).length; j++){
+            for(int j = 0; j < value.get(i).length ; j++){
                 System.out.print(value.get(i)[j]);
                 System.out.print(" ");
             }
